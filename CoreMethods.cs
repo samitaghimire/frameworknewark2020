@@ -37,6 +37,14 @@ namespace NewarkProject_2020
             }
         }
         //checkboxelect
+        public static void checkBoxSelect(IWebDriver driver, String controlType, String ControlID)
+			{
+				if (controlType.Equals("Id"))
+					driver.FindElement(By.Id(ControlID)).Click();
+				if (controlType.Equals("xpath"))
+					driver.FindElement(By.XPath(ControlID)).Click();
+
+			}
 
         //logout
         //clickbutton
