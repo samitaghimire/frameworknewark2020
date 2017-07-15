@@ -45,6 +45,27 @@ namespace NewarkProject_2020
 					driver.FindElement(By.XPath(ControlID)).Click();
 
 			}
+	    
+	     
+	    //textbox enter
+	    public static void textboxenter(IWebDriver driver, String ControlType, String ControlID, String Value)
+        {
+            if (ControlType.Equals("Id"))
+                driver.FindElement(By.Id(ControlID)).SendKeys(Value);
+            if (ControlType.Equals("Name"))
+                driver.FindElement(By.Name(ControlID)).SendKeys(Value);
+        }
+	
+	    //buttonclick
+        public static void buttonclick(IWebDriver driver, String ControlType, String ControlID)
+        {
+            if (ControlType.Equals("Id"))
+                driver.FindElement(By.Id(ControlID)).Click();
+            if (ControlType.Equals("xPath"))
+                driver.FindElement(By.XPath(ControlID)).Click();
+
+
+        }
 
         //logout
         //clickbutton
