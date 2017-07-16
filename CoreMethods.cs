@@ -17,25 +17,13 @@ namespace NewarkProject_2020
         //register
         // EntertextBox
         //dropdownselect
-        public static void dropdownselect(IWebDriver driver, String controltype)
-        {
-            if (controltype == "Id")
-            {
-                new SelectElement(driver.FindElement(By.Id("radius_dd"))).SelectByIndex(4);
-            }
-            if (controltype == "Id")
-            {
-                new SelectElement(driver.FindElement(By.Id("Gender"))).SelectByIndex(2);
-            }
-            if (controltype == "Id")
-            {
-                new SelectElement(driver.FindElement(By.Id("Race"))).SelectByIndex(2);
-            }
-            if (controltype == "Id")
-            {
-                new SelectElement(driver.FindElement(By.Id("Education"))).SelectByIndex(9);
-            }
-        }
+        public static void dropDownSelect(IWebDriver driver, String controlType, String ControlID, String value)
+		{
+			if (controlType.Equals("Id"))
+				new SelectElement(driver.FindElement(By.Id(ControlID))).SelectByValue(value);
+			if (controlType.Equals("xpath"))
+				new SelectElement(driver.FindElement(By.XPath(ControlID))).SelectByValue(value);
+		}
         //checkboxelect
         public static void checkBoxSelect(IWebDriver driver, String controlType, String ControlID)
 			{
