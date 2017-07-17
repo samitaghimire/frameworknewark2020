@@ -9,8 +9,8 @@ namespace NewarkProject_2020
     class input
     {
         //login input
-        public static string usernameValue = "admin";
-        public static string passvalue = "admin123";
+        public static string usernameValue = "anil developer";
+        public static string passvalue = "123456";
 
         //register input
         public static string unamevalue = "sweta";

@@ -10,6 +10,7 @@ namespace NewarkProject_2020
     {
         static void Main(string[] args)
         {
+            FeatureMethods.login();
         }
     }
 }

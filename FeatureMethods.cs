@@ -12,10 +12,14 @@ namespace NewarkProject_2020
     {
         public static IWebDriver driver = new ChromeDriver();
 
-        public static void searchByMiles()
+        public static void login()
         {
-            driver.Url = "http://107.180.79.11:8080/";
-            CoreMethods.dropdownselect(driver, "Id");
+            driver.Url = @"http://107.180.79.11:8080/";
+            CoreMethods.buttonclick(driver, "Id", Control_Id.login_Click);
+            CoreMethods.textboxenter(driver, "Id", Control_Id.username, input.usernameValue);
+            CoreMethods.textboxenter(driver, "Name", Control_Id.password, input.passvalue);
+            CoreMethods.buttonclick(driver, "XPath", Control_Id.loginbutton);
+
         }
     }
 }
